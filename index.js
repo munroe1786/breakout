@@ -56,3 +56,12 @@ user.classList.add('user')
 user.style.left = currentPosition[0] + 'px'
 user.style.bottom = currentPosition[1] +'px'
 grid.appendChild(user)
+
+//move user
+function moveUser(e) {
+    switch(e.key) {
+        case 'ArrowLeft':
+            currentPosition[0] -= 10
+            user.style.left = currentPosition[0] + 'px'
+    }
+}
