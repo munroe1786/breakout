@@ -66,6 +66,11 @@ function drawUser() {
     user.style.bottom = currentPosition[1] +'px'
 }
 
+//draw the ball
+function drawBall() {
+    ball.style.left = ballCurrentPosition[0] + 'px'
+    ball.style.bottom = ballCurrentPosition[1] + 'px'
+}
 
 //move user
 function moveUser(e) {
@@ -92,6 +97,5 @@ document.addEventListener('keydown', moveUser)
 
 const ball = document.createElement('div')
 ball.classList.add('ball')
-ball.style.left = ballCurrentPosition[0] + 'px'
-ball.style.bottom = ballCurrentPosition[1] + 'px'
+drawBall()
 grid.appendChild(ball)
