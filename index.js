@@ -74,7 +74,7 @@ function moveUser(e) {
             }
             break;
         case 'ArrowRight':
-            if (currentPosition[0] < boardWidth) {
+            if (currentPosition[0] < boardWidth - blockWidth) {
                 currentPosition[0] += 10
                 drawUser()
             }
@@ -84,3 +84,9 @@ function moveUser(e) {
 }
 
 document.addEventListener('keydown', moveUser)
+
+//add ball
+
+const ball = document.createElement('div')
+ball.classList.add('ball')
+grid.appendChild(ball)
